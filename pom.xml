@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.purewind</groupId>
+    <artifactId>pac4j-oauth-wechat</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Pac4j Oauth for Wechat</name>
+
+    <properties>
+
+        <pac4j.version>2.1.0</pac4j.version>
+        <java.version>1.8</java.version>
+        <shiro.version>1.4.0</shiro.version>
+        <servlet.version>3.1.0</servlet.version>
+
+        <slf4j.version>1.6.6</slf4j.version>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.pac4j</groupId>
+            <artifactId>pac4j-oauth</artifactId>
+            <version>${pac4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
