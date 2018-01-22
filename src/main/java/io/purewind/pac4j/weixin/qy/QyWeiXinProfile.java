@@ -8,8 +8,9 @@
  */
 package io.purewind.pac4j.weixin.qy;
 
-import org.apache.commons.lang.StringUtils;
 import org.pac4j.oauth.profile.OAuth20Profile;
+
+import java.util.List;
 
 /**
  * 微信企业用户信息
@@ -19,25 +20,24 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  */
 public class QyWeiXinProfile extends OAuth20Profile {
 
-
-    public String getOpenid() {
-        return (String) getAttribute(QyWeiXinAttributesDefinition.OPEN_ID);
+    public String getName() {
+        return (String) getAttribute(QyWeiXinAttributesDefinition.NAME);
     }
 
     public String getUserId() {
         return (String) getAttribute(QyWeiXinAttributesDefinition.USER_ID);
     }
 
-    public Integer getDeviceId() {
-        return (Integer) getAttribute(QyWeiXinAttributesDefinition.DEVICE_ID);
+    public String getAvatar() {
+        return (String) getAttribute(QyWeiXinAttributesDefinition.AVATAR);
+    }
+
+    public List<String> getDepartment() {
+        return (List<String>) getAttribute(QyWeiXinAttributesDefinition.DEPARTMENT);
     }
 
     @Override
     public String getUsername() {
         return getUserId();
-    }
-
-    public boolean isUser() {
-        return StringUtils.isNotEmpty(getUserId());
     }
 }
